@@ -11,15 +11,19 @@
     <div ng-controller="HabitsCtrl" class="container">
       <h1>Habit Track</h1>
       <h5>Total Completed: {{ totalCompleted}}</h5>
+      <!----------- KEY DIV ------>
       <div class="key">
-      <i class="fa fa-plus"></i> if you did the habit  <br>
-       <i class="fa fa-minus"></i> if you failed to do the habit.
+        <i class="fa fa-plus"></i> if you did the habit  <br>
+        <i class="fa fa-minus"></i> if you failed to do the habit.
+        Times goal is optional...
      </div>
+     <!----------- NEW HABIT DIV ------>
      <div>
        <input type="text" placeholder="Habit Name" ng-model="name"></br>
        <input type="number" ng-model="goal"> times </br>
        <button type="button" name="button" ng-click="create(name,goal)">create</button>
      </div>
+     <!----------- HABIT ITERATION DIV ------>
      <div class="row">
       <ul>
          <li class="five columns habit" ng-repeat="habit in habits">
