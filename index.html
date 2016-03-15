@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="App">
+  <head>
+    <meta charset="utf-8">
+    <title>HabitTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css  " type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div ng-controller="HabitsCtrl" class="container">
+      <h1>Habit Track</h1>
+      <h5>Total Completed: {{ totalCompleted}}</h5>
+      <div class="key">
+      <i class="fa fa-plus"></i> if you did the habit  <br>
+       <i class="fa fa-minus"></i> if you failed to do the habit.
+     </div>
+     <div>
+       <input type="text" placeholder="Habit Name" ng-model="name"></br>
+       <input type="number" ng-model="goal"> times </br>
+       <button type="button" name="button" ng-click="create(name,goal)">create</button>
+     </div>
+     <div class="row">
+      <ul>
+         <li class="five columns habit" ng-repeat="habit in habits">
+           <div ng-show="!habit.complete">
+              <h5> {{ habit.name }} <i class="fa fa-trash" ng-click=delete(habit)></i> </h5>
+            <i class="fa fa-plus" ng-click=up(habit)></i>
+            <span> {{ habit.upCount }}</span> <br>
+            <i class="fa fa-minus"ng-click=down(habit)></i>
+            <span> {{ habit.downCount }} </span></br>
+            <span ng-show="{{habit.goal > 0}}"> {{ habit.goal }} times </span>
+           </div>
+           <div ng-show="habit.complete">
+             <p>You have completed "{{ habit.name }}". <i class="fa fa-trash" ng-click=delete(habit)></i> </p>
+           </div>
+         </li>
+      </ul>
+     </div>
+    </div>
+  <script src="js/angular.js" charset="utf-8"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>

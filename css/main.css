@@ -1,0 +1,47 @@
+li {
+  list-style: none;
+}
+
+.fa {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  color: white;
+  padding: 2px;
+
+}
+
+.fa-plus {
+  background: lightgreen;
+}
+
+.fa-minus {
+  background: tomato;
+}
+.fa-trash {
+  color: #555;
+
+}
+
+span {
+  font-size: 1.2em;
+}
+
+h1, h2, h3,h4,h5 {
+  margin-bottom: 5px;
+}
+
+.key {
+  border: 1px solid #ddd;
+  width: 250px;
+  margin-bottom: 20px;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.habit {
+  margin-left: 0!important;
+  margin-bottom: 30px;
+  height: 150px;
+}
