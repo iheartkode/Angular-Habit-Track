@@ -5,7 +5,6 @@ App.controller("HabitsCtrl", function($scope) {
   /* CONTROLLER VARS */
   $scope.totalCompleted = 0;
   $scope.habits = [];
-  
    /*----------------------
        UP COUNTER EVENT    
   ------------------------ */
